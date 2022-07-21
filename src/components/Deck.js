@@ -1,4 +1,5 @@
 import Flashcard from "./Flashcard";
+import React from "react";
 
 const allCards = [
   {
@@ -31,18 +32,16 @@ const allCards = [
 ];
 
 export default function Deck() {
-
   const sortedDeck = [...allCards].sort(shuffle);
 
-  const usedDeck = [sortedDeck[0], sortedDeck[1], sortedDeck[2], sortedDeck[3]]
+  const usedDeck = [sortedDeck[0], sortedDeck[1], sortedDeck[2], sortedDeck[3]];
 
-  function shuffle(){
+  function shuffle() {
     return Math.random() - 0.5;
   }
 
   return (
     usedDeck.map((flash, index) => <Flashcard question={flash.question} index={index+1} answer={flash.answer}/>)
-    )
+)
+
 }
-
-

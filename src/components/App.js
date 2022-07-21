@@ -10,11 +10,7 @@ export default function App() {
 
   return (
     <>
-    {/* {start ? (<PlayScreen />) : (<Home setStart={setStart}/>)} */}
-    <div className="turned-flashcard">
-            <p>Pergunta index</p>
-            <img src="assets/setinha.png" alt="Turn Card Button"/>
-        </div>
+    {start ? (<PlayScreen />) : (<Home setStart={setStart}/>)}
     </>
   );
 }

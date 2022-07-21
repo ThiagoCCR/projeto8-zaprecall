@@ -1,28 +1,19 @@
-import React from "react"
+import React from "react";
 
+export default function Flashcard({ question, index, answer }) {
+  const [showQuestion, setShowQuestion] = React.useState(false);
 
-
-export default function Flashcard ({question, index, answer}){
-
-    const [showQuestion, setShowQuestion] = React.useState(false);
-
-
-
-
-
-
-
-
-
-
-
-    return(
-        <div className="flashcard">
-            <p>Pergunta {index}</p>
-            <div>
-                <ion-icon name="play-outline"></ion-icon>
-            </div>
-        </div>
-    )
+  return showQuestion ? (
+    <div className="turned-flashcard">
+      <p>{question}</p>
+      <img src="assets/setinha.png" alt="Turn Card Button" />
+    </div>
+  ) : (
+    <div className="flashcard">
+      <p>Pergunta {index}</p>
+      <div onClick={() => setShowQuestion(true)}>
+        <ion-icon name="play-outline"></ion-icon>
+      </div>
+    </div>
+  );
 }
-
