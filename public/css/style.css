@@ -187,3 +187,20 @@ h1 {
 .green {
   background-color: #2fbe34;
 }
+
+.ion-red {
+ color: #ff3030 !important;
+}
+
+.ion-orange {
+  color: #ff922e !important;
+}
+
+.ion-green {
+  color: #2fbe34 !important;
+}
+
+.italic{
+  font-style: italic;
+  text-decoration-line: line-through;
+}
