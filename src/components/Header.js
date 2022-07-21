@@ -1,7 +1,7 @@
 export default function Header (){
 
     return (
-        <div class="header">
+        <div className="header">
         <img
           src="assets/image 2.png"
           className="play-screen-logo"
