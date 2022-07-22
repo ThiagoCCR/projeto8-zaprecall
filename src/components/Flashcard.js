@@ -1,5 +1,6 @@
 import React from "react";
 import FinalFlashcard from "./FinalFlashcard"
+import turn from "../assets/img/setinha.png";
 
 export default function Flashcard({ question, index, answer }) {
   const [flashState, setFlashState] = React.useState("initial");
@@ -16,7 +17,7 @@ export default function Flashcard({ question, index, answer }) {
     return (
     <div className="turned-flashcard">
       <p>{question}</p>
-      <img onClick={() => setFlashState("answers")} src="assets/setinha.png" alt="Turn Card Button" />
+      <img onClick={() => setFlashState("answers")} src={turn} alt="Turn Card Button" />
     </div>)
   } else if (flashState === "answers"){
     return (

@@ -1,9 +1,12 @@
+import logop from "../assets/img/image 2.png";
+
+
 export default function Header (){
 
     return (
         <div className="header">
         <img
-          src="assets/image 2.png"
+          src={logop}
           className="play-screen-logo"
           alt="PlayScreen logo logo"
         ></img>
