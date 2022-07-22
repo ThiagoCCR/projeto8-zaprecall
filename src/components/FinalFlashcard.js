@@ -1,4 +1,4 @@
-export default function FinalFlashcard({flashState ,index}) {
+export default function FinalFlashcard({flashState ,index }) {
   
     if (flashState === "final-red"){
         return (

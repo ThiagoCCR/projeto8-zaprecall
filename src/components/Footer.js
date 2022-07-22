@@ -1,8 +1,11 @@
-export default function Footer (){
+export default function Footer ({footerState}){
+
 
     return (
         <div className="footer">
-            <p>0/4 Concluidos</p>
+            <p>{footerState.length}/4 Concluidos</p>
+            <div>
+            </div>
         </div>
     )
 }

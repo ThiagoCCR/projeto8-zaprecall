@@ -2,8 +2,17 @@ import React from "react";
 import FinalFlashcard from "./FinalFlashcard"
 import turn from "../assets/img/setinha.png";
 
-export default function Flashcard({ question, index, answer }) {
+export default function Flashcard({ question, index, answer, footerState, setFooterState}) {
+
   const [flashState, setFlashState] = React.useState("initial");
+
+
+  function changeFooter(value){
+    setFlashState(value)
+    setFooterState([...footerState, value])
+    console.log(footerState)
+  }
+
 
   if (flashState === "initial") {
     return (
@@ -24,9 +33,9 @@ export default function Flashcard({ question, index, answer }) {
     <div className="turned-flashcard">
         <p>{answer}</p>
         <div>
-            <button className="answer-options red" onClick={() => setFlashState("final-red")} >Não Lembrei</button>
-            <button className="answer-options orange" onClick={() => setFlashState("final-orange")} >Quase não Lembrei</button>
-            <button className="answer-options green" onClick={() => setFlashState("final-green")} >Zap!</button>
+            <button className="answer-options red" onClick={() => changeFooter("final-red")} >Não Lembrei</button>
+            <button className="answer-options orange" onClick={() => changeFooter("final-orange")} >Quase não Lembrei</button>
+            <button className="answer-options green" onClick={() => changeFooter("final-green")} >Zap!</button>
         </div>
     </div>
     )
