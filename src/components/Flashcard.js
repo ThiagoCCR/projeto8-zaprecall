@@ -2,17 +2,16 @@ import React from "react";
 import FinalFlashcard from "./FinalFlashcard"
 import turn from "../assets/img/setinha.png";
 
-export default function Flashcard({ question, index, answer, footerState, setFooterState}) {
+export default function Flashcard({ question, index, answer, footerState, setFooterState, setIsRed}) {
 
   const [flashState, setFlashState] = React.useState("initial");
-
 
   function changeFooter(value){
     setFlashState(value);
     let ion = "";
     if (value === "final-red"){
       ion = <ion-icon name="close-circle" class="md hydrated ion-red"></ion-icon>
-      
+      setIsRed(true);
     } else if (value === "final-orange"){
         ion = <ion-icon name="help-circle" class="md hydrated ion-orange"></ion-icon>
       }else{
