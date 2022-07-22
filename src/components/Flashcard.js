@@ -8,9 +8,17 @@ export default function Flashcard({ question, index, answer, footerState, setFoo
 
 
   function changeFooter(value){
-    setFlashState(value)
-    setFooterState([...footerState, value])
-    console.log(footerState)
+    setFlashState(value);
+    let ion = "";
+    if (value === "final-red"){
+      ion = <ion-icon name="close-circle" class="md hydrated ion-red"></ion-icon>
+      
+    } else if (value === "final-orange"){
+        ion = <ion-icon name="help-circle" class="md hydrated ion-orange"></ion-icon>
+      }else{
+      ion = <ion-icon name="checkmark-circle" class="md hydrated ion-green"></ion-icon>
+    }
+    setFooterState([...footerState, ion])
   }
 
 
