@@ -7,10 +7,12 @@ export default function App() {
 
   const [start, setStart] = React.useState(false);
 
+  const [chosenDeck, setChosenDeck] = React.useState("Senhor dos Anéis");
+
 
   return (
     <>
-    {start ? (<PlayScreen setStart={setStart}/>) : (<Home setStart={setStart}/>)}
+    {start ? (<PlayScreen setStart={setStart} chosenDeck={chosenDeck}/>) : (<Home setStart={setStart} setChosenDeck= {setChosenDeck}/>)}
     </>
   );
 }

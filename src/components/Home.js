@@ -2,7 +2,7 @@ import logo from "../assets/img/image 1.png";
 
 
 
-export default function Home ({setStart}){
+export default function Home ({setStart, setChosenDeck}){
 
 return (
         <div className="main">

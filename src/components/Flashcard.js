@@ -33,7 +33,7 @@ export default function Flashcard({ question, index, answer, footerState, setFoo
     return (
     <div className="turned-flashcard">
       <p>{question}</p>
-      <img onClick={() => setFlashState("answers")} src={turn} alt="Turn Card Button" />
+      <img onClick={() => setFlashState("answers")} src={turn} alt="Turn Card Button"/>
     </div>)
   } else if (flashState === "answers"){
     return (
