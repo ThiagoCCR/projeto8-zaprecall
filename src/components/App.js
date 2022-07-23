@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <>
-    {start ? (<PlayScreen />) : (<Home setStart={setStart}/>)}
+    {start ? (<PlayScreen setStart={setStart}/>) : (<Home setStart={setStart}/>)}
     </>
   );
 }

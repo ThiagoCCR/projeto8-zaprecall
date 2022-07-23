@@ -33,7 +33,7 @@ const allCards = [
   },
 ];
 
-export default function PlayScreen() {
+export default function PlayScreen({setStart}) {
   const sortedDeck = [...allCards].sort(shuffle);
 
   const usedDeck = [sortedDeck[0], sortedDeck[1], sortedDeck[2], sortedDeck[3]];
@@ -62,7 +62,7 @@ export default function PlayScreen() {
           />
         ))}
       </div>
-      <Footer footerState={footerState} isRed={isRed}/>
+      <Footer footerState={footerState} isRed={isRed} setStart={setStart}/>
     </div>
   );
 }

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;700&family=Righteous&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL@-5,400,1;-5,700,1&family=Righteous&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -24,6 +23,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 70px;
 }
 
 .home-logo {
@@ -48,7 +48,7 @@ h1 {
   border: 1px solid #dbdbdb;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #d70900;
-  font-family: "Recursive";
+  font-family: 'Recursive', sans-serif;
   font-weight: 400;
   border-radius: 5px;
   color: #d70900;
@@ -73,7 +73,7 @@ h1 {
 }
 
 .flashcard p {
-  font-family: Recursive;
+  font-family: 'Recursive', sans-serif;
   font-size: 16px;
   font-weight: 700;
 }
@@ -105,7 +105,7 @@ h1 {
 }
 
 .turned-flashcard p {
-  font-family: Recursive;
+  font-family: 'Recursive', sans-serif;
   font-size: 16px;
   font-weight: 400;
   margin-top: 10px;
@@ -121,7 +121,7 @@ h1 {
   height: 35;
   border: none;
   border-radius: 5px;
-  font-family: Recursive;
+  font-family: 'Recursive', sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
@@ -159,7 +159,7 @@ h1 {
   left: 0;
   z-index: 1;
   background-color: #ffffff;
-  height: 70px;
+  min-height: 70px;
   width: 100%;
   box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -169,12 +169,82 @@ h1 {
 }
 
 .footer p {
-  font-family: Recursive;
+  font-family: 'Recursive', sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
 
-/* COLORS */
+.footer-title{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-title p{
+  margin-left: 10px;
+}
+
+.footer-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-title p{
+  margin-left: 10px;
+}
+
+.footer ion-icon{
+  font-size: 23px;
+}
+
+.footer-big {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  height: 171px;
+  width: 100%;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.footer-big ion-icon{
+  font-size: 23px;
+}
+
+
+.footer-big p {
+  font-family: 'Recursive', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.final-message-footer{
+  width: 200px;
+}
+
+.footer-big button{
+  width: 167px;
+  height: 32px;
+  background-color: #FB6B6B;
+  border-radius: 5px;
+  font-family: 'Recursive', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  }
+
+/* JS STYLES */
 
 .red {
   background-color: #ff3030;
@@ -203,4 +273,17 @@ h1 {
 .italic{
   font-style: italic;
   text-decoration-line: line-through;
+}
+
+strong{
+  font-weight: 700;
+}
+
+
+@media (max-width: 667px){
+
+  .container{
+    overflow-y: scroll;
+  }
+
 }
