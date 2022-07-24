@@ -1,6 +1,12 @@
 import MessageFooter from "./MessageFooter";
 
-export default function Footer({ footerState, isRed, setStart}) {
+export default function Footer({ footerState, isRed, setStart, setChosenDeck}) {
+
+  function Reset(){
+    setChosenDeck("")
+    setStart(false)
+  }
+
   if (footerState.length === 4) {
     return (
       <div className="footer-big">
@@ -11,7 +17,7 @@ export default function Footer({ footerState, isRed, setStart}) {
           <p>{footerState.length}/4 CONCLUÍDOS</p>
           <div>{footerState.map((value) => value)}</div>
         </div>
-        <button onClick={()=>setStart(false)}>Reiniciar Recall</button>
+        <button onClick={Reset}>Reiniciar Recall</button>
       </div>
     );
   } else {

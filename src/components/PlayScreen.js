@@ -83,7 +83,7 @@ function shuffle() {
   return Math.random() - 0.5;
 }
 
-export default function PlayScreen({ setStart, chosenDeck }) {
+export default function PlayScreen({ setStart, chosenDeck, setChosenDeck}) {
 
   const [usedDeck, setUsedDeck] = React.useState([])
 
@@ -118,7 +118,7 @@ export default function PlayScreen({ setStart, chosenDeck }) {
           />
         ))}
       </div>
-      <Footer footerState={footerState} isRed={isRed} setStart={setStart} />
+      <Footer footerState={footerState} isRed={isRed} setStart={setStart} setChosenDeck={setChosenDeck}/>
     </div>
   );
 }
